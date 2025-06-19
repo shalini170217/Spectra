@@ -10,12 +10,20 @@ export default function ProfilePage() {
     router.replace('/');
   };
 
+  const goToCamera = () => {
+    router.push('/camera');
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Profile Page</Text>
 
-      <TouchableOpacity onPress={handleSignOut} style={styles.button}>
-        <Text style={styles.buttonText}>Sign Out</Text>
+      <TouchableOpacity onPress={goToCamera} style={styles.cameraButton}>
+        <Text style={styles.cameraButtonText}>Open Camera</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={handleSignOut} style={styles.signOutButton}>
+        <Text style={styles.signOutText}>Sign Out</Text>
       </TouchableOpacity>
     </View>
   );
@@ -35,13 +43,25 @@ const styles = StyleSheet.create({
     marginBottom: 24,
     color: '#111827',
   },
-  button: {
+  cameraButton: {
+    backgroundColor: '#4f46e5',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    marginBottom: 16,
+  },
+  cameraButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  signOutButton: {
     backgroundColor: '#ef4444',
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 8,
   },
-  buttonText: {
+  signOutText: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 16,

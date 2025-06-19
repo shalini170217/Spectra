@@ -11,6 +11,10 @@ export default function RootLayout() {
       name="auth"
       options={{headerShown:false}}
       />
+      <Stack.Screen 
+      name="profilepage"
+      options={{headerShown:false}}
+      />
     </Stack>
   )
 }
